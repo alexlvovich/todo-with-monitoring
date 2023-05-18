@@ -61,7 +61,8 @@ To access the monitoring features provided by Konso, follow these steps:
 
 4. In the todo application's codebase, locate the configuration file (`appsettings.json` or similar) and update the Konso API key with your own.
 
-   ```json
+```json
+   
    "Konso": {
     "Logging": {
       "Endpoint": "https://apis.konso.io",
@@ -82,7 +83,8 @@ To access the monitoring features provided by Konso, follow these steps:
       "App": "todoapp"
     }
   }
-   ```
+  
+```
 
 5. Rebuild and run the todo application. Now, logs, tracked values, and metrics will be sent to Konso for monitoring and analysis.
 
