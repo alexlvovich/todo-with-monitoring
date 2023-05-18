@@ -1,0 +1,28 @@
+﻿@page
+@model todo.Pages.CreateModel
+@{
+}
+
+<h3>What need to be done:</h3>
+
+<form method="post">
+
+    <div class="row">
+        <div asp-validation-summary="ModelOnly"></div>
+        <span asp-validation-for="ToDo.Name"></span>
+        <br />
+        Name:
+        <input asp-for="ToDo.Name" class="form-control" />
+    </div>
+    <br />
+    
+    <div class="container">
+        <div class="col-md-12 text-center">
+            <button type="submit" class="btn btn-success">Save </button>
+        </div> 
+    </div>
+</form>
+
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+<script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>

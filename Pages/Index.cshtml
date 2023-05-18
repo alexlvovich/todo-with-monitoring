@@ -1,0 +1,38 @@
+﻿@page
+@model IndexModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    ViewData["Title"] = "To Do";
+}
+
+<form method="post">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var todo in Model.ToDos)
+            {
+                <tr>
+                    <td> @todo.Id  </td>
+                    <td>@todo.Name</td>
+                    <td>
+                        <a asp-page="./Edit" asp-route-id="@todo.Id" class="link-warning">Edit</a> |
+                        <button type="submit" asp-page-handler="delete" class="btn btn-primary btn-sm"
+                                asp-route-id="@todo.Id">delete
+                        </button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+   <div>
+        <a asp-page="Create" class="btn btn-success btn-sm">Create New</a>
+   </div>
+    
+</form>
+
